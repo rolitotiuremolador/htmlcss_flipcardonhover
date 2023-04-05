@@ -1,0 +1,66 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin:0;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.card {
+    /* position: absolute; */
+    width: 300px;
+    height: 350px;
+    background: lightblue;
+}
+
+.content {
+    text-align: center;
+    position: relative;
+    padding: 5em;
+    transition: transform 3s;
+    background: brown;
+    transform-style: preserve-3d;
+    height: 300px;
+}
+
+.card:hover .content {
+    /* transform: rotateY(90deg) */
+    transform: rotateY(.5turn)
+}
+
+.thefront, 
+.theback {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right:0;   
+    padding: 3em;
+    backface-visibility: hidden;
+}
+
+/* .thefront {
+    background: red;
+    transform: rotateY(.25turn)
+} */
+
+.cardTitle {
+    font-size: 3rem;
+    transform: translateZ(5rem);
+}
+
+.cardsub {
+    transform: translateZ(2rem);
+}
+
+.theback {
+    transform: rotateY(.5turn);
+    background: lightseagreen;
+}
+
+.cardbody {
+    transform: translateZ(2rem);
+}
